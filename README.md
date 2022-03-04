@@ -1,38 +1,14 @@
-# Crazyflie Firmware  [![CI](https://github.com/bitcraze/crazyflie-firmware/workflows/CI/badge.svg)](https://github.com/bitcraze/crazyflie-firmware/actions?query=workflow%3ACI)
+# SSY191 Project
 
-This project contains the source code for the firmware used in the Crazyflie range of platforms, including the Crazyflie 2.X and the Roadrunner.
+In addition to the original source code for the quadrotor, see src directory, the folder simulink-model contains the templates for the Simulink and Simscape models that you will use during the course. The contents of this folder is as follows:
 
-### Crazyflie 1.0 support
+* closed_loop_script.m -- Script for running tests with Breach. Will be used for automated testing.
+* closed_loop.slx -- Closed loop system. You are not expected to do any changes in this file, in fact it is easier for us to help you if you keep the structure as is.
+* crazyflie.slx -- Controller and code generator. Your controller goes in this file.
+* crazyflie_wrapper.tlc -- Code generation template. Inserts the generated code at the right place in the firmware with the correct inputs and outputs. Does not need to be changed.
+* open_loop.slx -- Open loop Simulink file. Should not need any changes.
+* params.m -- Setup of parameters, such as mass and inertia.
+* plant.ssc -- Simscape model of the plant. Your model goes here.
+* sensors.sscp -- Simscape blackbox model of the sensor emulator. Cannot be changed.
 
-The 2017.06 release was the last release with Crazyflie 1.0 support. If you want
-to play with the Crazyflie 1.0 and modify the code, please clone this repo and
-branch off from the 2017.06 tag.
 
-## Building and Flashing
-See the [building and flashing instructions](https://github.com/bitcraze/crazyflie-firmware/blob/master/docs/building-and-flashing/build.md) in the github docs folder.
-
-
-## Official Documentation
-
-Check out the [Bitcraze crazyflie-firmware documentation](https://www.bitcraze.io/documentation/repository/crazyflie-firmware/master/) on our website.
-
-## Generated documentation
-
-The easiest way to generate the API documentation is to use the [toolbelt](https://github.com/bitcraze/toolbelt)
-
-```tb build-docs```
-
-and to view it in a web page
-
-```tb docs```
-
-## Contribute
-Go to the [contribute page](https://www.bitcraze.io/contribute/) on our website to learn more.
-
-### Test code for contribution
-
-To run the tests please have a look at the [unit test documentation](https://www.bitcraze.io/documentation/repository/crazyflie-firmware/master/development/unit_testing/).
-
-## License
-
-The code is licensed under LGPL-3.0
