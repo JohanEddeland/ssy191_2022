@@ -1,5 +1,6 @@
 # SSY191 Project
 
+## First part of the course: Generate code from Simulink
 The Simulink code generation part of the course can be found in *generate_code*. In addition to the original source code for the quadrotor, see *src* directory, the folder *simulink-model* contains the templates for the Simulink and Simscape models that you will use during the course. The contents of this folder is as follows:
 
 * closed_loop_script.m -- Script for running tests with Breach. Will be used for automated testing.
@@ -10,5 +11,8 @@ The Simulink code generation part of the course can be found in *generate_code*.
 * params.m -- Setup of parameters, such as mass and inertia.
 * plant.ssc -- Simscape model of the plant. Your model goes here.
 * sensors.sscp -- Simscape blackbox model of the sensor emulator. Cannot be changed.
+
+## Second part of the course: Write your own C code
+When writing your own C implementation of the controller for the crazyflie, you should only change the file *your_code.c* in *write_code/src/modules/src*. Further instructions will be given in relevant project documents as well as in the file *your_code.c* itself. 
 
 
