@@ -189,6 +189,9 @@ static void %<mdlName>ModelTask(void* param)
     if (healthShallWeRunTest()) {
       healthRunTests(&sensorData);
     } else {
+	
+	stateEstimator(&state, tick);
+	commanderGetSetpoint(&setpoint, &state);
 
     %<mdlName>_U.Acc_x = sensorData.acc.x;
     %<mdlName>_U.Acc_y = sensorData.acc.y;
