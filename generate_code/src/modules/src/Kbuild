@@ -62,3 +62,4 @@ obj-y += lighthouse/
 # SSY191
 obj-y += crazyflie.o
 obj-y += crazyflieModel.o
+obj-y += crazyflie_data.o
